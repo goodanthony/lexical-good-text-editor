@@ -1,5 +1,6 @@
 # GoodTextEditor – is a low-key, copy-paste Lexical editor for React -  
-# Statrt with thank you https://github.com/facebook/lexical
+
+Statrt with thank you https://github.com/facebook/lexical
 
 GoodTextEditor is a small, self-contained **Lexical-based rich text editor** you can copy straight into your React codebase.  
 It focuses on being **easy to drop in, easy to customise**, and not pretending to be a full npm package.
