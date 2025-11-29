@@ -1,0 +1,167 @@
+/* Container for the whole editor */
+.text-editor-container {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+  /* Smooth transition for focus */
+}
+
+.text-editor-container:focus-within {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+}
+
+.editor-inner {
+  position: relative;
+  background: #fff;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.toolbar button {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  color: #374151;
+  font-size: 14px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar button:hover {
+  background: #e5e7eb;
+}
+
+.toolbar button.active {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+.toolbar select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.toolbar-separator {
+  width: 1px;
+  height: 20px;
+  background: #d1d5db;
+  margin: 0 4px;
+}
+
+/* Editor Area */
+.editor-input {
+  min-height: 250px;
+  padding: 12px;
+  outline: none;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #111827;
+}
+
+/* For Alignment & Readability */
+/* This makes "Enter" create a visible gap, separating thoughts */
+.editor-input p {
+  margin: 0 0 10px 0;
+}
+
+.editor-input h1,
+.editor-input h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.editor-placeholder {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #9ca3af;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* HTML View */
+.editor-html-view {
+  width: 100%;
+  height: 250px;
+  padding: 12px;
+  border: none;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: monospace;
+  font-size: 13px;
+  resize: vertical;
+  outline: none;
+}
+
+/* --- Rendered Content Styles --- */
+
+/* More specific list styling  */
+.editor-input ul,
+.editor-list-ul {
+  list-style-type: disc;
+  padding-left: 24px;
+  margin: 8px 0;
+}
+
+.editor-input ol,
+.editor-list-ol {
+  list-style-type: decimal;
+  padding-left: 24px;
+  margin: 8px 0;
+}
+
+/* nested */
+.editor-input ul ul,
+.editor-input ol ul {
+  list-style-type: circle;
+}
+
+.editor-link {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.editor-input b,
+.editor-input strong {
+  font-weight: bold !important;
+}
+
+.editor-input i,
+.editor-input em {
+  font-style: italic !important;
+}
+
+.editor-input u {
+  text-decoration: underline !important;
+}
+
+.editor-input a {
+  color: #1677ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
